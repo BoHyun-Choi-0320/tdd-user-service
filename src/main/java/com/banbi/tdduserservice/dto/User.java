@@ -1,23 +1,22 @@
 package com.banbi.tdduserservice.dto;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Getter
-@Table(name="\"USER\"")
-@NoArgsConstructor
-@AllArgsConstructor
+@Setter
+@Table(name = "\"USER\"")
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(name = "user_id")
+    @Column(nullable = false)
     private String userId;
-    @Column(name = "user_pw")
+    @Column(nullable = false)
     private String userPw;
+    @Column(nullable = false)
+    private String userName;
+
 }

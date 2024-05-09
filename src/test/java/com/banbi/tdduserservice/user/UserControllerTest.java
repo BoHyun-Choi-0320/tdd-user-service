@@ -3,7 +3,7 @@ package com.banbi.tdduserservice.user;
 import com.banbi.tdduserservice.dto.User;
 import com.banbi.tdduserservice.repository.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +32,7 @@ public class UserControllerTest {
     @Autowired
     ObjectMapper objectMapper;
 
-    @Before
+    @BeforeEach
     public void insertData() throws Exception {
         for(int i =1 ; i<=10; i++){
             User user = User.builder()
